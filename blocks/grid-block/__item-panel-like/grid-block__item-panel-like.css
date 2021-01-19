@@ -5,5 +5,8 @@
     background-position: center;
     border-width: inherit;
     padding: 0;
+}
 
+.grid-block__item-panel-like:focus {
+    outline: none;
 }

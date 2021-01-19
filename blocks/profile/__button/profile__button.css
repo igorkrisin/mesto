@@ -6,3 +6,7 @@
     border: none;
     padding: 0;
 }
+
+.profile__button:focus {
+    outline: none;
+}
