@@ -1,1 +1,10 @@
-.header__logo {}
+.header__logo {
+    display: inline;
+}
+
+@media screen and (max-width: 767px) {
+    .header__logo {
+        max-width: calc(103.74px + (142 - 103.74) * ((100vw - 321px) / (767 - 321)));
+        margin-left: 27px;
+    }
+}

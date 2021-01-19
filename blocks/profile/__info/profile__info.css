@@ -4,3 +4,13 @@
     column-gap: 18px;
     align-items: flex-start;
 }
+
+@media screen and (max-width: 767px) {
+    .profile__info {
+        column-gap: 10px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+}

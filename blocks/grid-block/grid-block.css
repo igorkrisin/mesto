@@ -6,3 +6,20 @@
     gap: 17px;
     margin-bottom: 60px;
 }
+
+@media screen and (max-width: 767px) {
+    .grid-block {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .grid-block {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 20px;
+        margin-bottom: 48px;
+    }
+}

@@ -6,3 +6,9 @@
     line-height: 1.21;
     margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+    .profile__info-description {
+        font-size: calc(14px + (18 - 14) * ((100vw - 321px) / (767 - 321)));
+    }
+}
