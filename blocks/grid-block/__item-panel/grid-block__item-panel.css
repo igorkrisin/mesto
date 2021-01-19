@@ -1,7 +1,7 @@
-.profile {
-    width: 100%;
+.grid-block__item-panel{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    max-width: 246px;
+    margin: 25px 15px 31px 21px;
 }
