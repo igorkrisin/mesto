@@ -16,3 +16,7 @@
 .popup__container-btn:focus {
     outline: none;
 }
+
+.popup__container-btn:hover {
+    opacity: 0.8;
+}

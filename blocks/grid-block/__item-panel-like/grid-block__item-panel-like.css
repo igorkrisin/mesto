@@ -10,3 +10,7 @@
 .grid-block__item-panel-like:focus {
     outline: none;
 }
+
+.grid-block__item-panel-like:hover {
+    opacity: 0.6;
+}

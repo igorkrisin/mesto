@@ -4,3 +4,8 @@
     top: -40px;
     right: -45px;
 }
+
+.popup__close:hover {
+    opacity: 0.6;
+    transform: rotate(45deg);
+}

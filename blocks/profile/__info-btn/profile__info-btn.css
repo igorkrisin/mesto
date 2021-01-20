@@ -13,6 +13,10 @@
         .profile__info-btn:focus {
             outline: none;
         }
+
+        .profile__info-btn:hover {
+            opacity: 0.6;
+        }
         
         @media screen and (max-width: 768px) {
             .profile__info-btn {
