@@ -17,9 +17,12 @@
 @import url(../blocks/grid-block/__item-panel-title/grid-block__item-panel-title.css);
 @import url(../blocks/grid-block/__item-panel-like/grid-block__item-panel-like.css);
 @import url(../blocks/author/author.css);
-
-
-
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__container-content/popup__container-content.css);
+@import url(../blocks/popup/__container-title/popup__container-title.css);
+@import url(../blocks/popup/__container-input/popup__container-input.css);
+@import url(../blocks/popup/__container-btn/popup__container-btn.css);
 
 
 
