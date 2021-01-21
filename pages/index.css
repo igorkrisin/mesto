@@ -24,5 +24,8 @@
 @import url(../blocks/popup/__container-input/popup__container-input.css);
 @import url(../blocks/popup/__container-btn/popup__container-btn.css);
 @import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/grid-block/__item-panel-like/_active/grid-block__item-panel-like_active.css);
+
 
 
