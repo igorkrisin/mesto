@@ -1,22 +1,17 @@
-.popup__container-input {
+.popup__container-input-description {
     width: 100%;
     min-height: 27px;
     border: none;
     position: relative;
-    border-bottom: 1px solid  rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-family: 'Input', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.21;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     padding: 0;
 }
 
-.popup__container-input:focus {
+.popup__container-input-description:focus {
     outline: none;
-}
-
-.popup__container-input:nth-last-child(2) {
-    margin-bottom: 0;
-
 }

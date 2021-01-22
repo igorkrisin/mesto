@@ -9,9 +9,15 @@
 
 .grid-block__item-panel-like:focus {
     outline: none;
+    background: url(../../../images/Unionsvg.svg) no-repeat;
+    min-width: 22px;
+    min-height: 19px;
+    background-position: center;
+    border-width: inherit;
+    padding: 0;
 }
 
 .grid-block__item-panel-like:hover {
     opacity: 0.6;
+    transition: opacity 0.3s ease 0s;
 }
-

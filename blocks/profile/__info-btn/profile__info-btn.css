@@ -13,7 +13,7 @@
         .profile__info-btn:focus {
             outline: none;
         }
-
+        
         .profile__info-btn:hover {
             opacity: 0.6;
         }

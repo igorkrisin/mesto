@@ -1,0 +1,17 @@
+.popup__container-input-name {
+    width: 100%;
+    min-height: 27px;
+    border: none;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: 'Input', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.popup__container-input-name:focus {
+    outline: none;
+}
