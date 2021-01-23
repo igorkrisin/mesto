@@ -1,0 +1,9 @@
+.profile__block {
+    max-width: 336px;
+}
+
+@media screen and (max-width:768px) {
+    .profile__block {
+        max-width: calc(158px + (366 - 158) * ((100vw - 320px) / (768 - 321)));
+    }
+}
