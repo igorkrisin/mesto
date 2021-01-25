@@ -1,8 +1,8 @@
 .profile__wrapper {
-    display: grid;
-    grid-template-columns: auto 2fr;
-    max-width: 486px;
-    column-gap: 30px;
+    display: flex;
+    /* grid-template-columns: auto 2fr; */
+    /* max-width: 486px; */
+    /* column-gap: 30px; */
     align-items: center;
 }
 

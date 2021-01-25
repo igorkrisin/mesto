@@ -1,7 +1,7 @@
 .profile__info {
-    display: grid;
-    grid-template-columns: auto 2fr;
-    column-gap: 18px;
+    display: flex;
+    /* grid-template-columns: auto 2fr; */
+    /* column-gap: 18px; */
     align-items: flex-start;
 }
 
