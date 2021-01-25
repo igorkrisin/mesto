@@ -1,7 +1,6 @@
 .popup__container-content {
     width: calc(100% - 72px);
     padding: 34px 36px 37px 36px;
-    max-height: 258px;
     position: relative;
 }
 
@@ -12,4 +11,3 @@
         padding: 35px 22px 49px 22px;
     }
 }
-

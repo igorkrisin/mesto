@@ -10,7 +10,7 @@
 
 .header::after {
     content: '';
-    background-color: rgba(84, 84, 84, 1);
+    background-color: rgba(84, 84, 84, 0.7);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -18,12 +18,10 @@
     height: 1px;
 }
 
-
 @media screen and (max-width: 768px) {
     .header {
         max-width: calc(320px + (880 - 320) * ((100vw - 320px) / (768 - 320)));
         margin-top: 28px;
-        margin-bottom: 40px;
         min-height: 56px;
     }
 }

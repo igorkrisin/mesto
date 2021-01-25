@@ -11,11 +11,11 @@ popupClose.addEventListener("click", function(e) {
 
 
 let profilInfoName = document.querySelector('.profile__info-name');
-let containeInputName = document.querySelector('.popup__container-input-name');
+let containeInputName = document.querySelector('.popup__container-input_name');
 containeInputName.setAttribute('value', profilInfoName.textContent);
 
 let profileInfoDescription = document.querySelector('.profile__info-description');
-let popupContainerInputDescription = document.querySelector('.popup__container-input-description')
+let popupContainerInputDescription = document.querySelector('.popup__container-input_description')
 popupContainerInputDescription.setAttribute('value', profileInfoDescription.textContent);
 
 let formElement = document.querySelector('.popup__container-content');
