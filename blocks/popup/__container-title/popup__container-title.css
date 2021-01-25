@@ -5,3 +5,17 @@
     line-height: 1.208;
     margin: 0 0 46px 0;
 }
+
+@media screen and (max-width: 915px) {
+    .popup__container-title {
+        font-size: 18px;
+        width: calc(100vw - 110px);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .popup__container-title {
+        width: calc(100vw - 82px);
+        white-space: nowrap;
+    }
+}

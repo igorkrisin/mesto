@@ -6,11 +6,24 @@
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 915px) {
+    .profile {
+       width: calc(100% - 80px);
+    }
+}
+
+
 @media screen and (max-width: 767px) {
     .profile {
         flex-direction: column;
-        max-width: 282px;
         flex-wrap: wrap;
         margin-bottom: 36px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile {
+       width: calc(100% - 38px);
     }
 }

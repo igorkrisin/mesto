@@ -1,15 +1,19 @@
 .profile__wrapper {
     display: flex;
-    /* grid-template-columns: auto 2fr; */
-    /* max-width: 486px; */
-    /* column-gap: 30px; */
     align-items: center;
 }
 
 @media screen and (max-width: 767px) {
     .profile__wrapper {
-        display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100%;   
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .profile__wrapper {
+        max-width: 282px;
     }
 }
