@@ -11,6 +11,5 @@
 @media screen and (max-width: 768px) {
     .footer__author {
         max-width: calc(282px + (714 - 282) * ((100vw - 320px) / (768 - 320)));
-        margin: 0 0 36px;
-    }
+        margin: 0 0 36px 19px;    }
 }
