@@ -8,7 +8,11 @@
 
 @media screen and (max-width: 915px) {
     .profile {
-       width: calc(100% - 80px);
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 36px;
+        justify-content: center;
     }
 }
 
@@ -24,6 +28,6 @@
 
 @media screen and (max-width: 320px) {
     .profile {
-       width: calc(100% - 38px);
+        width: 100%;
     }
 }

@@ -1,9 +1,9 @@
 .popup__close {
-    max-width: 40px;
+    max-width: 60px;
     position: absolute;
-    top: -40px;
-    right: -45px;
-    translate: 45deg;
+    top: -50px;
+    right: -55px;    
+    cursor: pointer;
 }
 
 .popup__close:hover {

@@ -5,6 +5,7 @@
     background-position: center;
     border-width: inherit;
     padding: 0;
+    cursor: pointer;
 }
 
 .grid-block__item-panel-like:focus {

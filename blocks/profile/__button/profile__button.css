@@ -1,5 +1,5 @@
 .profile__button {
-    background: url(../../../images/Vectorkrest.png) no-repeat;
+    background: url(../../../images/krestic.svg) no-repeat;
     min-width: 150px;
     min-height: 50px;
     background-position: center;
@@ -7,6 +7,7 @@
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .profile__button:focus {

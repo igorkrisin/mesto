@@ -10,6 +10,7 @@
     line-height: 1.21;
     margin-bottom: 30px;
     padding: 0;
+    cursor: pointer;
 }
 
 .popup__container-input:focus {
