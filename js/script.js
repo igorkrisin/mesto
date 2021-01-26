@@ -6,7 +6,6 @@ let containeInputName = document.querySelector('.popup__container-input_name');
 let profileInfoDescription = document.querySelector('.profile__info-description');
 let popupContainerInputDescription = document.querySelector('.popup__container-input_description')
 let formElement = document.querySelector('.popup__container-content');
-let formSave = document.querySelector('.popup__container-btn');
 
 function popupOpened(e) {
     popup.classList.add('popup_opened')
@@ -19,9 +18,8 @@ function popupClosed(e) {
 popupClose.addEventListener("click", popupClosed);
 
 
-containeInputName.setAttribute('value', profilInfoName.textContent);
-
-popupContainerInputDescription.setAttribute('value', profileInfoDescription.textContent);
+containeInputName.value = profilInfoName.textContent;
+popupContainerInputDescription.value = profileInfoDescription.textContent;
 
 
 function formSubmitHandler(e) {
@@ -34,6 +32,4 @@ function formSubmitHandler(e) {
 
 formElement.addEventListener('submit', formSubmitHandler);
 
-formSave.addEventListener("click", popupClosed);
-
-console.log(containeInputName.value, formElement.addEventListener('submit', formSubmitHandler));
+document.querySelector('.popup__container-btn').addEventListener("click", popupClosed);
