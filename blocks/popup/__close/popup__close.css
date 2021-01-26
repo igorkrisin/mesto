@@ -1,9 +1,4 @@
 .popup__close {
-    max-width: 60px;
-    position: absolute;
-    top: -50px;
-    right: 0px;
-    max-width: 35px;
     cursor: pointer;
 }
 
