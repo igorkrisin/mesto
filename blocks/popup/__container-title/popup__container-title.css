@@ -17,5 +17,6 @@
     .popup__container-title {
         width: calc(100vw - 82px);
         white-space: nowrap;
+        margin: 0 0 68px 0;
     }
 }
