@@ -10,7 +10,7 @@
 
 .grid-block__item-panel-like:focus {
     outline: none;
-    background: url(../../../images/unionsvg.svg) no-repeat;
+    background: url(../../../images/blackhart.svg) no-repeat;
 }
 
 .grid-block__item-panel-like:hover {
