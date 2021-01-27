@@ -3,4 +3,4 @@
 Ипользуется язык программирования java script, а так же код HTML и таблицы сттилей CSS. 
 
 
-ССылка на проект: https://igorkrisin.github.io/mesto/index.html
+ССылка на проект: https://igorkrisin.github.io/mesto/
