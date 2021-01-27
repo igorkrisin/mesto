@@ -18,6 +18,12 @@
     height: 1px;
 }
 
+@media screen and (max-width: 915px) {
+    .header {
+        max-width: 581px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         max-width: calc(320px + (880 - 320) * ((100vw - 320px) / (768 - 320)));

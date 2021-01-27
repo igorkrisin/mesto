@@ -1,7 +1,7 @@
 .popup__button {
-    position: relative;
-    top: -184px;
-    right: -490px;
+    position: absolute;
+    top: -55px;
+    right: -61px;
     padding: 0;
     max-width: 60px;
     max-height: 60px;
@@ -11,4 +11,11 @@
     margin: 0;
     background: none;
     border: none;
+}
+
+@media screen and (max-width: 915px) {
+    .popup__button {
+        top: -62px;
+        right: 0px;
+    }
 }
