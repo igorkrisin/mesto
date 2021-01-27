@@ -9,27 +9,22 @@ let formElement = document.querySelector('.popup__container-content');
 
 function popupOpened(e) {
     popup.classList.add('popup_opened')
+    popupContainerInputDescription.value = profileInfoDescription.textContent;
+    containeInputName.value = profilInfoName.textContent;
 }
-popupOpen.addEventListener("click", popupOpened);
 
 function popupClosed(e) {
     popup.classList.remove('popup_opened')
 }
-popupClose.addEventListener("click", popupClosed);
-
-
-containeInputName.value = profilInfoName.textContent;
-popupContainerInputDescription.value = profileInfoDescription.textContent;
-
 
 function formSubmitHandler(e) {
     e.preventDefault();
 
     profilInfoName.textContent = containeInputName.value;
     profileInfoDescription.textContent = popupContainerInputDescription.value;
-
+    popupClosed(e);
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
-
-document.querySelector('.popup__container-btn').addEventListener("click", popupClosed);
+popupOpen.addEventListener("click", popupOpened);
+popupClose.addEventListener("click", popupClosed);
