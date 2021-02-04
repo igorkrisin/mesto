@@ -1,0 +1,31 @@
+.popupAddBtn__container-btn {
+    width: 100%;
+    min-height: 50px;
+    background: #000000;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    padding: 0;
+    border: none;
+    border-radius: 2px;
+    margin-top: 48px;
+    cursor: pointer;
+}
+
+.popupAddBtn__container-btn:focus {
+    outline: none;
+}
+
+.popupAddBtn__container-btn:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease 0s;
+}
+
+@media screen and (max-width: 320px) {
+    .popupAddBtn__container-btn {
+        font-size: 14px;
+        line-height: 1.21;
+    }
+}

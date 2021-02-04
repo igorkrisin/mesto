@@ -1,0 +1,12 @@
+.popupAddBtn__container-content {
+    width: calc(100% - 72px);
+    padding: 34px 36px 37px 36px;
+    position: relative;
+}
+
+@media screen and (max-width: 320px) {
+    .popupAddBtn__container-content {
+        width: 100%;
+        padding: 28px 22px 49px 22px;
+    }
+}

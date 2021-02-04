@@ -1,0 +1,22 @@
+.popupAddBtn__container-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.208;
+    margin: 0 0 46px 0;
+}
+
+@media screen and (max-width: 915px) {
+    .popupAddBtn__container-title {
+        font-size: 18px;
+        width: calc(100vw - 110px);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .popupAddBtn__container-title {
+        width: calc(100vw - 82px);
+        white-space: nowrap;
+        margin: 0 0 68px 0;
+    }
+}
