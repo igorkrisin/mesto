@@ -7,7 +7,8 @@ let profileInfoDescription = document.querySelector('.profile__info-description'
 let popupContainerInputDescription = document.querySelector('.popup__container-input_js_description')
 let formElement = document.querySelector('.popup__container-content');
 const popupAddBtnOpen = document.querySelector('.profile__button');
-const popupAddBtn = document.querySelector('.popupAddBtn')
+const popupAddBtn = document.querySelector('.popupAddBtn');
+const popupAddBtnClose = document.querySelector('.popupAddBtn__close')
 
 function
 popupOpened(e) {
@@ -33,11 +34,15 @@ popupAddBtnOpened(e) {
     popupAddBtn.classList.add('popupAddBtn_opened')
 }
 
+function popupAddBtnClosed(e) {
+    popupAddBtn.remove('popupAddBtn_opened')
+}
 
 formElement.addEventListener('submit', formSubmitHandler);
 popupOpen.addEventListener("click", popupOpened);
 popupClose.addEventListener("click", popupClosed);
 popupAddBtnOpen.addEventListener("click", popupAddBtnOpened);
+popupAddBtnClose.addEventListener("click", popupAddBtnClosed);
 
 const initialCards = [{
         name: 'Архыз',
