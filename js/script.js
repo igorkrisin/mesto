@@ -36,6 +36,7 @@ popupAddBtnOpened(e) {
 
 function popupAddBtnClosed(e) {
     popupAddBtn.remove('popupAddBtn_opened')
+
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
