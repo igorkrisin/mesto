@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Место</title>
     <link rel="stylesheet" href="./pages/index.css">
+    <script src="././js/script.js" defer></script>
 </head>
 
 <body class="page">
@@ -28,7 +29,7 @@
                 <button class="profile__button" type="button" aria-label="Изменить картинку"></button>
             </section>
             <section class="grid-block">
-                <article class="grid-block__item">
+             <!--    <article class="grid-block__item">
                     <img src="./images/karachaevsk.jpg" alt="Картинка блока" class="grid-block__item-image">
                     <div class="grid-block__item-panel">
                         <h2 class="grid-block__item-panel-title">Карачаевск</h2>
@@ -69,7 +70,7 @@
                         <h2 class="grid-block__item-panel-title">Домбай</h2>
                         <button class=grid-block__item-panel-like type="button" aria-label="Лайк"></button>
                     </div>
-                </article>
+                </article> -->
             </section>
         </main>
         <footer class="footer">
@@ -98,8 +99,15 @@
             </form>
         </div>
     </div>
-
-    <script src="././js/script.js"></script>
+<template class="template">
+    <article class="grid-block__item">
+        <img src="./images/karachaevsk.jpg" alt="Картинка блока" class="grid-block__item-image">
+        <div class="grid-block__item-panel">
+            <h2 class="grid-block__item-panel-title"></h2>
+            <button class=grid-block__item-panel-like type="button" aria-label="Лайк"></button>
+        </div>
+    </article>
+</template>
 </body>
 
 </html>
