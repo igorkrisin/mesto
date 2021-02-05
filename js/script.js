@@ -8,7 +8,9 @@ let popupContainerInputDescription = document.querySelector('.popup__container-i
 let formElement = document.querySelector('.popup__container-content');
 const popupAddBtnOpen = document.querySelector('.profile__button');
 const popupAddBtn = document.querySelector('.popupAddBtn');
-const popupAddBtnClose = document.querySelector('.popupAddBtn__close')
+const popupAddBtnClose = document.querySelector('.popupAddBtn__close');
+const templateEl = document.querySelector('.template');
+const listContainerEl = document.querySelector('.grid-block')
 
 function
 popupOpened(e) {
@@ -70,3 +72,21 @@ const initialCards = [{
     }
 ];
 
+function render() {
+    const htmlEL = initialCards
+        .map(getItem)
+
+    listContainerEl.append(...htmlEL);
+}
+
+function getItem(item) {
+    const newItem = templateEl.content.cloneNode(true);
+    const nameEl = newItem.querySelector('.grid-block__item-panel-title');
+    nameEl.textContent = item.name;
+    const newPicture = newItem.querySelector('.grid-block__item-image');
+    newPicture.src = item.link;
+
+    return newItem;
+}
+
+render();
