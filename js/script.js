@@ -77,17 +77,16 @@ const initialCards = [{
     }
 ];
 
+
+
 //функция вывода маасиву на страницу//
 
 function render() {
     const htmlEL = initialCards
         .map(getItem)
-
     listContainerEl.append(...htmlEL);
 }
-
 //функция добавления массива на страницу//
-
 function getItem(item) {
     const newItem = templateEl.content.cloneNode(true);
     const nameEl = newItem.querySelector('.grid-block__item-panel-title');
@@ -95,10 +94,34 @@ function getItem(item) {
     const newPicture = newItem.querySelector('.grid-block__item-image');
     newPicture.src = item.link;
 
+    //Слушатель на лайк
+    const filledLike = newItem.querySelector('.grid-block__item-panel-like');
+    filledLike.addEventListener("click", handleLike);
+
+    //слушатель на удаление карточки
+    const delItemUrn = newItem.querySelector('.grid-block__delet')
+    delItemUrn.addEventListener('click', delElItem);
+
     return newItem;
+
+
+
+}
+
+//Удаление карточек функция
+function delElItem(event) {
+    const targetEl = event.target;
+    console.log(targetEl)
+    const targetItem = targetEl.closest('.grid-block__item');
+    targetItem.remove();
+}
+
+//Лайки функция
+function handleLike(event) {
+    const targetEl = event.target;
+    targetEl.classList.toggle('grid - block__item - panel - like_active');
 }
 //добавление новой карточки//
-
 function handelAdd(e) {
     e.preventDefault();
     const inputName = inputNameEl.value;
@@ -114,14 +137,9 @@ function handelAdd(e) {
 let FormAddBtnEL = document.querySelector('.popupAddBtn__container-content').addEventListener('submit', handelAdd);
 
 
-render();
+
 
 
 //удаление карточек//
 
-
-//Лайки
-const likeEl = document.querySelector('.grid-block__item-panel-like')
-likeEl.addEventListener('click', function(evt) {
-    evt.target.classList.toggle('grid-block__item-panel-like_active');
-});  
+render();
