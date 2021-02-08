@@ -7,4 +7,5 @@
     align-items: unset;
     justify-content: space-between;
     max-height: 381px;
+    position: relative;
 }

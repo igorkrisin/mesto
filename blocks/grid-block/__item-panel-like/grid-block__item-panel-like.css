@@ -8,11 +8,6 @@
     cursor: pointer;
 }
 
-.grid-block__item-panel-like:focus {
-    outline: none;
-    background: url(../../../images/blackhart.svg) no-repeat;
-}
-
 .grid-block__item-panel-like:hover {
     opacity: 0.5;
     transition: opacity 0.3s ease 0s;

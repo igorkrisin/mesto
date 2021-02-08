@@ -10,7 +10,11 @@ const popupAddBtnOpen = document.querySelector('.profile__button');
 const popupAddBtn = document.querySelector('.popupAddBtn');
 const popupAddBtnClose = document.querySelector('.popupAddBtn__close');
 const templateEl = document.querySelector('.template');
-const listContainerEl = document.querySelector('.grid-block')
+const listContainerEl = document.querySelector('.grid-block');
+const addButtonEl = document.querySelector('.popupAddBtn__container-btn');
+const inputNameEl = document.querySelector('.popupAddBtn__container-input_js_name');
+const inputDescriptionEl = document.querySelector('.popupAddBtn__container-input_js_description');
+
 
 function
 popupOpened(e) {
@@ -46,6 +50,7 @@ popupClose.addEventListener("click", popupClosed);
 popupAddBtnOpen.addEventListener("click", popupAddBtnOpened);
 popupAddBtnClose.addEventListener("click", popupAddBtnClosed);
 
+
 const initialCards = [{
         name: 'Архыз',
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -72,12 +77,16 @@ const initialCards = [{
     }
 ];
 
+//функция вывода маасиву на страницу//
+
 function render() {
     const htmlEL = initialCards
         .map(getItem)
 
     listContainerEl.append(...htmlEL);
 }
+
+//функция добавления массива на страницу//
 
 function getItem(item) {
     const newItem = templateEl.content.cloneNode(true);
@@ -88,5 +97,31 @@ function getItem(item) {
 
     return newItem;
 }
+//добавление новой карточки//
+
+function handelAdd(e) {
+    e.preventDefault();
+    const inputName = inputNameEl.value;
+    const inputDescription = inputDescriptionEl.value;
+    const listItem = getItem({ name: inputName, link: inputDescription });
+    listContainerEl.prepend(listItem);
+    inputNameEl.value = '';
+    inputDescriptionEl.value = '';
+    popupAddBtnClosed(e);
+}
+
+// слушатель для добавления новой карточки//
+let FormAddBtnEL = document.querySelector('.popupAddBtn__container-content').addEventListener('submit', handelAdd);
+
 
 render();
+
+
+//удаление карточек//
+
+
+//Лайки
+const likeEl = document.querySelector('.grid-block__item-panel-like')
+likeEl.addEventListener('click', function(evt) {
+    evt.target.classList.toggle('grid-block__item-panel-like_active');
+});  
