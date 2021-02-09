@@ -5,6 +5,7 @@
     max-height: 75vh;
     display: flex;
     position: relative;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {

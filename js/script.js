@@ -87,6 +87,9 @@ function render() {
         .map(getItem)
     listContainerEl.append(...htmlEL);
 }
+
+
+
 //функция добавления массива на страницу//
 function getItem(item) {
     const newItem = templateEl.content.cloneNode(true);
@@ -147,15 +150,18 @@ let FormAddBtnEL = document.querySelector('.popupAddBtn__container-content').add
 function popupImgAdd(event) {
     const targetEl = event.target;
     const targetItem = targetEl.closest('.grid-block__item');
-    popupImg.classList.add('popup-img_opened');
 
+    popupImg.classList.add('popup-img_opened');
+    const popupImage = document.querySelector('.popup-img__picture');
+    const popupImgName = document.querySelector('.popup-img__name');
+
+    popupImage.src = targetEl.src
+    popupImgName.textContent = targetItem.textContent
 };
 
 //функция закрытия попапа с картинкой//
 function popupImgClosed(e) {
     popupImg.classList.remove('popup-img_opened');
 }
-
-
 
 render();
