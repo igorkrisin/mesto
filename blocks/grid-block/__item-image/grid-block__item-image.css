@@ -1,5 +1,7 @@
 .grid-block__item-image {
-    width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    max-width: 282px;
+    max-height: 282px;
 }

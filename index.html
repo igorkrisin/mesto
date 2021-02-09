@@ -29,7 +29,7 @@
                 <button class="profile__button" type="button" aria-label="Изменить картинку"></button>
             </section>
             <section class="grid-block">
-             <!--    <article class="grid-block__item">
+                <!--    <article class="grid-block__item">
                     <img src="./images/karachaevsk.jpg" alt="Картинка блока" class="grid-block__item-image">
                     <div class="grid-block__item-panel">
                         <h2 class="grid-block__item-panel-title">Карачаевск</h2>
@@ -93,18 +93,27 @@
             <button type="button" class="popupAddBtn__button"><img src="./images/closeIcon.svg" class="popupAddBtn__close" alt="Крестик"></button>
             <form class="popupAddBtn__container-content" name="formPopupAddBtn">
                 <h2 class="popupAddBtn__container-title">Новое место</h2>
-                <input type="text" class="popupAddBtn__container-input popup__container-input_js_name" name="nameAddBtn" placeholder="Название">
-                <input type="text" class="popupAddBtn__container-input popup__container-input_js_description" name="descriptionAddBtn" placeholder="Ссылка на картинку">
+                <input type="text" class="popupAddBtn__container-input popupAddBtn__container-input_js_name" placeholder="Название">
+                <input type="text" class="popupAddBtn__container-input popupAddBtn__container-input_js_description" placeholder="Ссылка на картинку">
                 <button class="popupAddBtn__container-btn" type="submit">Сохранить</button>
             </form>
         </div>
     </div>
-<template class="template">
+    <div class="popup-img">
+        <div class="popup-img__container">
+            <button type="button" class="popup-img__button"><img src="./images/closeIcon.svg" class="popup-img__close" alt="Крестик"></button>
+            <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="всплывающая картинка" class="popup-img__picture">
+            <h2 class="popup-img__name">dfsdfsd</h2>
+
+        </div>
+    </div>
+    <template class="template">
     <article class="grid-block__item">
         <img src="./images/karachaevsk.jpg" alt="Картинка блока" class="grid-block__item-image">
+        <button class="grid-block__delet" type="button" aria-label="удаление карточки"></button>
         <div class="grid-block__item-panel">
             <h2 class="grid-block__item-panel-title"></h2>
-            <button class=grid-block__item-panel-like type="button" aria-label="Лайк"></button>
+            <button class="grid-block__item-panel-like" type="button" aria-label="Лайк"></button>
         </div>
     </article>
 </template>

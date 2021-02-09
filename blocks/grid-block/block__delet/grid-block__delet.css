@@ -1,0 +1,18 @@
+.grid-block__delet {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    background: url(../../../images/delete.svg) no-repeat;
+    min-width: 18px;
+    min-height: 19.3px;
+    background-position: center;
+    box-sizing: inherit;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.grid-block__delet:focus {
+    border: none;
+    outline: none;
+}
