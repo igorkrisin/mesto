@@ -14,6 +14,7 @@ const listContainerEl = document.querySelector('.grid-block');
 const addButtonEl = document.querySelector('.popupAddBtn__container-btn');
 const inputNameEl = document.querySelector('.popupAddBtn__container-input_js_name');
 const inputDescriptionEl = document.querySelector('.popupAddBtn__container-input_js_description');
+const popupImg = document.querySelector('.popup-img')
 
 
 function
@@ -99,8 +100,15 @@ function getItem(item) {
     filledLike.addEventListener("click", handleLike);
 
     //слушатель на удаление карточки
-    const delItemUrn = newItem.querySelector('.grid-block__delet')
+    const delItemUrn = newItem.querySelector('.grid-block__delet');
     delItemUrn.addEventListener('click', delElItem);
+
+    //слушатель на открытие  попапа картинки
+    newPicture.addEventListener('click', popupImgAdd);
+
+    //слушатель на закрытие картинки
+    const popupImgclose = document.querySelector('.popup-img__button');
+    popupImgclose.addEventListener('click', popupImgClosed);
 
     return newItem;
 
@@ -111,7 +119,6 @@ function getItem(item) {
 //Удаление карточек функция
 function delElItem(event) {
     const targetEl = event.target;
-    console.log(targetEl)
     const targetItem = targetEl.closest('.grid-block__item');
     targetItem.remove();
 }
@@ -119,7 +126,7 @@ function delElItem(event) {
 //Лайки функция
 function handleLike(event) {
     const targetEl = event.target;
-    targetEl.classList.toggle('grid - block__item - panel - like_active');
+    targetEl.classList.toggle('grid-block__item-panel-like_active');
 }
 //добавление новой карточки//
 function handelAdd(e) {
@@ -136,10 +143,19 @@ function handelAdd(e) {
 // слушатель для добавления новой карточки//
 let FormAddBtnEL = document.querySelector('.popupAddBtn__container-content').addEventListener('submit', handelAdd);
 
+//функция открытия попапа с картинкой//
+function popupImgAdd(event) {
+    const targetEl = event.target;
+    const targetItem = targetEl.closest('.grid-block__item');
+    popupImg.classList.add('popup-img_opened');
+
+};
+
+//функция закрытия попапа с картинкой//
+function popupImgClosed(e) {
+    popupImg.classList.remove('popup-img_opened');
+}
 
 
-
-
-//удаление карточек//
 
 render();
