@@ -1,4 +1,4 @@
-.popup__button {
+.profile-popup__button {
     position: absolute;
     top: -55px;
     right: -61px;
@@ -13,12 +13,12 @@
     border: none;
 }
 
-.popup__button:focus {
+.profile-popup__button:focus {
     outline: none;
 }
 
 @media screen and (max-width: 915px) {
-    .popup__button {
+    .profile-popup__button {
         top: -62px;
         right: 0px;
     }

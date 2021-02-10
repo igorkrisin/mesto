@@ -1,4 +1,4 @@
-.popup__container-btn {
+.profile-popup__container-btn {
     width: 100%;
     min-height: 50px;
     background: #000000;
@@ -14,17 +14,17 @@
     cursor: pointer;
 }
 
-.popup__container-btn:focus {
+.profile-popup__container-btn:focus {
     outline: none;
 }
 
-.popup__container-btn:hover {
+.profile-popup__container-btn:hover {
     opacity: 0.8;
     transition: opacity 0.3s ease 0s;
 }
 
 @media screen and (max-width: 320px) {
-    .popup__container-btn {
+    .profile-popup__container-btn {
         font-size: 14px;
         line-height: 1.21;
     }

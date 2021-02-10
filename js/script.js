@@ -1,11 +1,11 @@
 const popupOpen = document.querySelector('.profile__info-btn');
-const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup__button');
-let profilInfoName = document.querySelector('.profile__info-name');
-let containeInputName = document.querySelector('.popup__container-input_js_name');
-let profileInfoDescription = document.querySelector('.profile__info-description');
-let popupContainerInputDescription = document.querySelector('.popup__container-input_js_description')
-let formElement = document.querySelector('.popup__container-content');
+const popup = document.querySelector('.profile-popup');
+const popupClose = document.querySelector('.profile-popup__button');
+const profilInfoName = document.querySelector('.profile__info-name');
+const containeInputName = document.querySelector('.profile-popup__container-input_js_name');
+const profileInfoDescription = document.querySelector('.profile__info-description');
+const popupContainerInputDescription = document.querySelector('.profile-popup__container-input_js_description')
+const formElement = document.querySelector('.profile-popup__container-content');
 const popupAddBtnOpen = document.querySelector('.profile__button');
 const popupAddBtn = document.querySelector('.popupAddBtn');
 const popupAddBtnClose = document.querySelector('.popupAddBtn__close');
@@ -38,11 +38,11 @@ function formSubmitHandler(e) {
 
 function
 popupAddBtnOpened(e) {
-    popupAddBtn.classList.add('popupAddBtn_opened')
+    popupAddBtn.classList.add('popup_opened')
 }
 
 function popupAddBtnClosed(e) {
-    popupAddBtn.classList.remove('popupAddBtn_opened')
+    popupAddBtn.classList.remove('popup_opened')
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
@@ -151,7 +151,7 @@ function popupImgAdd(event) {
     const targetEl = event.target;
     const targetItem = targetEl.closest('.grid-block__item');
 
-    popupImg.classList.add('popup-img_opened');
+    popupImg.classList.add('popup_opened');
     const popupImage = document.querySelector('.popup-img__picture');
     const popupImgName = document.querySelector('.popup-img__name');
 
@@ -161,7 +161,7 @@ function popupImgAdd(event) {
 
 //функция закрытия попапа с картинкой//
 function popupImgClosed(e) {
-    popupImg.classList.remove('popup-img_opened');
+    popupImg.classList.remove('popup_opened');
 }
 
 render();

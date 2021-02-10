@@ -1,4 +1,4 @@
-.popup__container-input {
+.profile-popup__container-input {
     width: 100%;
     min-height: 27px;
     border: none;
@@ -13,10 +13,10 @@
     cursor: pointer;
 }
 
-.popup__container-input:focus {
+.profile-popup__container-input:focus {
     outline: none;
 }
 
-.popup__container-input:nth-last-child(2) {
+.profile-popup__container-input:nth-last-child(2) {
     margin-bottom: 0px;
 }

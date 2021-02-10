@@ -1,14 +1,14 @@
-.popup__close {
+.profile-popup__close {
     cursor: pointer;
 }
 
-.popup__close:hover {
+.profile-popup__close:hover {
     opacity: 0.6;
     transition: transform 0.3s ease-in 0s;
 }
 
 @media screen and (max-width: 915px) {
-    .popup__close {
+    .profile-popup__close {
         max-width: 40px;
         max-height: 40px;
     }
