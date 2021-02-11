@@ -1,14 +1,14 @@
-.popupAddBtn__close {
+.popup__close {
     cursor: pointer;
 }
 
-.popupAddBtn__close:hover {
+.popup__close:hover {
     opacity: 0.6;
     transition: transform 0.3s ease-in 0s;
 }
 
 @media screen and (max-width: 915px) {
-    .popupAddBtn__close {
+    .popup__close {
         max-width: 40px;
         max-height: 40px;
     }
