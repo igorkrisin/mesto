@@ -128,9 +128,6 @@ function getItem(item) {
     //слушатель на удаление карточки
     const delItemUrn = newItem.querySelector('.grid-block__delet');
     delItemUrn.addEventListener('click', delElItem);
-    /*     openImgPopup.addEventListener("click", openPopupAddImg);
-        closeImgPopup.addEventListener("click", closePopupAddImg);
-     */
     //слушатель на открытие  попапа картинки
     newPicture.addEventListener('click', popupImgOpen);
 
@@ -172,11 +169,6 @@ function handelAdd(e) {
 // слушатель для добавления новой карточки//
 document.querySelector('.popupAddBtn__container-content').addEventListener('submit', handelAdd);
 
-/* function openPopupAddImg() {
-    openPopup(popupAddImg)
-}
- */
-
 
 //функция открытия попапа с картинкой//
 function popupImgOpen(event) {
@@ -195,28 +187,3 @@ function popupImgClosed(e) {
 }
 
 render();
-
-/* function
-popupOpened(e) {
-    profilePopup.classList.add('popup_opened')
-    popupContainerInputDescription.value = profileInfoDescription.textContent;
-    containeInputName.value = profilInfoName.textContent;
-}
- */
-/* function popupClosed(e) {
-    profilePopup.classList.remove('popup_opened')
-}
- */
-
-/* function
-popupAddBtnOpened(e) {
-    popupAddBtn.classList.add('popup_opened')
-}
-
-function popupAddBtnClosed(e) {
-    popupAddBtn.classList.remove('popup_opened')
-}*/
-
-/* popupAddBtnOpen.addEventListener("click", popupAddBtnOpened);
-popupAddBtnClose.addEventListener("click", popupAddBtnClosed);
- */
