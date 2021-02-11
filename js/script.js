@@ -1,31 +1,51 @@
-const popupOpen = document.querySelector('.profile__info-btn');
-const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup__button');
-let profilInfoName = document.querySelector('.profile__info-name');
-let containeInputName = document.querySelector('.popup__container-input_js_name');
-let profileInfoDescription = document.querySelector('.profile__info-description');
-let popupContainerInputDescription = document.querySelector('.popup__container-input_js_description')
-let formElement = document.querySelector('.popup__container-content');
-const popupAddBtnOpen = document.querySelector('.profile__button');
-const popupAddBtn = document.querySelector('.popupAddBtn');
-const popupAddBtnClose = document.querySelector('.popupAddBtn__close');
+const profilePopupOpen = document.querySelector('.profile__info-btn');
+const profilePopup = document.querySelector('.profile-popup');
+const profilePopupClose = document.querySelector('.profile-popup__button');
+const profilInfoName = document.querySelector('.profile__info-name');
+const containeInputName = document.querySelector('.profile-popup__container-input_js_name');
+const profileInfoDescription = document.querySelector('.profile__info-description');
+const popupContainerInputDescription = document.querySelector('.profile-popup__container-input_js_description');
+const formElement = document.querySelector('.profile-popup__container-content');
+const openImgPopup = document.querySelector('.profile__button');
+const popupAddImg = document.querySelector('.popupAddBtn');
+const closeImgPopup = document.querySelector('.popupAddBtn__close');
+
+
 const templateEl = document.querySelector('.template');
 const listContainerEl = document.querySelector('.grid-block');
 const addButtonEl = document.querySelector('.popupAddBtn__container-btn');
 const inputNameEl = document.querySelector('.popupAddBtn__container-input_js_name');
 const inputDescriptionEl = document.querySelector('.popupAddBtn__container-input_js_description');
-const popupImg = document.querySelector('.popup-img')
+const popupImg = document.querySelector('.popup-img');
+const popup = document.querySelector('.popup');
+const popupImage = document.querySelector('.popup-img__picture');
+const popupImgName = document.querySelector('.popup-img__name');
+const popupImgclose = document.querySelector('.popup-img__button');
 
 
-function
-popupOpened(e) {
-    popup.classList.add('popup_opened')
-    popupContainerInputDescription.value = profileInfoDescription.textContent;
-    containeInputName.value = profilInfoName.textContent;
+
+
+function openPopup(popup) {
+
+    popup.classList.add('popup_opened');
 }
 
-function popupClosed(e) {
-    popup.classList.remove('popup_opened')
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+}
+
+function openProfilePopup() {
+    openPopup(profilePopup)
+
+    popupContainerInputDescription.value = profileInfoDescription.textContent;
+    containeInputName.value = profilInfoName.textContent;
+
+}
+
+
+function closeProfilePopup() {
+    closePopup(profilePopup)
+
 }
 
 function formSubmitHandler(e) {
@@ -33,23 +53,25 @@ function formSubmitHandler(e) {
 
     profilInfoName.textContent = containeInputName.value;
     profileInfoDescription.textContent = popupContainerInputDescription.value;
-    popupClosed(e);
+    closeProfilePopup();
 }
 
-function
-popupAddBtnOpened(e) {
-    popupAddBtn.classList.add('popupAddBtn_opened')
+function openPopupAddImg() {
+    openPopup(popupAddImg)
 }
 
-function popupAddBtnClosed(e) {
-    popupAddBtn.classList.remove('popupAddBtn_opened')
+function closePopupAddImg() {
+    closePopup(popupAddImg)
 }
+
 
 formElement.addEventListener('submit', formSubmitHandler);
-popupOpen.addEventListener("click", popupOpened);
-popupClose.addEventListener("click", popupClosed);
-popupAddBtnOpen.addEventListener("click", popupAddBtnOpened);
-popupAddBtnClose.addEventListener("click", popupAddBtnClosed);
+profilePopupOpen.addEventListener("click", openProfilePopup);
+profilePopupClose.addEventListener("click", closeProfilePopup);
+
+openImgPopup.addEventListener("click", openPopupAddImg);
+closeImgPopup.addEventListener("click", closePopupAddImg);
+
 
 
 const initialCards = [{
@@ -97,6 +119,7 @@ function getItem(item) {
     nameEl.textContent = item.name;
     const newPicture = newItem.querySelector('.grid-block__item-image');
     newPicture.src = item.link;
+    newPicture.alt = item.name;
 
     //Слушатель на лайк
     const filledLike = newItem.querySelector('.grid-block__item-panel-like');
@@ -105,19 +128,21 @@ function getItem(item) {
     //слушатель на удаление карточки
     const delItemUrn = newItem.querySelector('.grid-block__delet');
     delItemUrn.addEventListener('click', delElItem);
-
+    /*     openImgPopup.addEventListener("click", openPopupAddImg);
+        closeImgPopup.addEventListener("click", closePopupAddImg);
+     */
     //слушатель на открытие  попапа картинки
-    newPicture.addEventListener('click', popupImgAdd);
+    newPicture.addEventListener('click', popupImgOpen);
 
-    //слушатель на закрытие картинки
-    const popupImgclose = document.querySelector('.popup-img__button');
-    popupImgclose.addEventListener('click', popupImgClosed);
+
 
     return newItem;
 
 
 
 }
+//слушатель на закрытие картинки
+popupImgclose.addEventListener('click', popupImgClosed);
 
 //Удаление карточек функция
 function delElItem(event) {
@@ -131,6 +156,7 @@ function handleLike(event) {
     const targetEl = event.target;
     targetEl.classList.toggle('grid-block__item-panel-like_active');
 }
+
 //добавление новой карточки//
 function handelAdd(e) {
     e.preventDefault();
@@ -140,20 +166,24 @@ function handelAdd(e) {
     listContainerEl.prepend(listItem);
     inputNameEl.value = '';
     inputDescriptionEl.value = '';
-    popupAddBtnClosed(e);
+    closePopupAddImg(e);
 }
 
 // слушатель для добавления новой карточки//
-let FormAddBtnEL = document.querySelector('.popupAddBtn__container-content').addEventListener('submit', handelAdd);
+document.querySelector('.popupAddBtn__container-content').addEventListener('submit', handelAdd);
+
+/* function openPopupAddImg() {
+    openPopup(popupAddImg)
+}
+ */
+
 
 //функция открытия попапа с картинкой//
-function popupImgAdd(event) {
+function popupImgOpen(event) {
     const targetEl = event.target;
     const targetItem = targetEl.closest('.grid-block__item');
 
-    popupImg.classList.add('popup-img_opened');
-    const popupImage = document.querySelector('.popup-img__picture');
-    const popupImgName = document.querySelector('.popup-img__name');
+    popupImg.classList.add('popup_opened');
 
     popupImage.src = targetEl.src
     popupImgName.textContent = targetItem.textContent
@@ -161,7 +191,32 @@ function popupImgAdd(event) {
 
 //функция закрытия попапа с картинкой//
 function popupImgClosed(e) {
-    popupImg.classList.remove('popup-img_opened');
+    popupImg.classList.remove('popup_opened');
 }
 
 render();
+
+/* function
+popupOpened(e) {
+    profilePopup.classList.add('popup_opened')
+    popupContainerInputDescription.value = profileInfoDescription.textContent;
+    containeInputName.value = profilInfoName.textContent;
+}
+ */
+/* function popupClosed(e) {
+    profilePopup.classList.remove('popup_opened')
+}
+ */
+
+/* function
+popupAddBtnOpened(e) {
+    popupAddBtn.classList.add('popup_opened')
+}
+
+function popupAddBtnClosed(e) {
+    popupAddBtn.classList.remove('popup_opened')
+}*/
+
+/* popupAddBtnOpen.addEventListener("click", popupAddBtnOpened);
+popupAddBtnClose.addEventListener("click", popupAddBtnClosed);
+ */
