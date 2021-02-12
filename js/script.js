@@ -175,15 +175,14 @@ function popupImgOpen(event) {
     const targetEl = event.target;
     const targetItem = targetEl.closest('.grid-block__item');
 
-    popupImg.classList.add('popup_opened');
-
+    openPopup(popupImg);
     popupImage.src = targetEl.src
     popupImgName.textContent = targetItem.textContent
 };
 
 //функция закрытия попапа с картинкой//
 function popupImgClosed(e) {
-    popupImg.classList.remove('popup_opened');
+    closePopup(popupImg);
 }
 
 render();
