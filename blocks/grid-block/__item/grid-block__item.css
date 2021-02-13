@@ -1,11 +1,11 @@
 .grid-block__item {
-    max-width: 381px;
+    max-width: 282px;
     background-color: #FFFFFF;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: unset;
     justify-content: space-between;
-    min-height: 381px;
+    min-height: 361px;
     position: relative;
 }
